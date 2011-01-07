@@ -20,7 +20,7 @@ my $move_repeat = $ARGV[2] if $ARGV[2];
 
 chomp($move_count);
 until($move_repeat eq 0) {
-my $write_count = $port->write(qq(L$move_count;));
+my $write_count = $port->write(qq(L$move_count;\n));
 sleep($move_delay);
 $move_repeat--;
 }
